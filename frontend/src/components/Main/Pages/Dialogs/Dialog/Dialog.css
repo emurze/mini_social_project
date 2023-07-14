@@ -1,0 +1,8 @@
+.dialog {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.dialog__messages {
+    flex: 1 1 auto;
+}

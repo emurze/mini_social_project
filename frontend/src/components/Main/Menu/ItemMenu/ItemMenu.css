@@ -1,0 +1,16 @@
+.item_menu {
+    display: inline-block;
+
+    margin: 0 0 20px 15px;
+}
+.item_menu:last-child{margin-bottom: 0}
+
+.item_menu__link {
+    transition: 0.2s;
+
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 7px 10px;
+}
+.item_menu__link:hover {color: #6cd6ee;}
+.item_menu .active {color: #6cd6ee;}

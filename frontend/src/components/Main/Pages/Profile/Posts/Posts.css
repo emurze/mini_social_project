@@ -1,0 +1,12 @@
+.posts {
+    grid-area: posts;
+    margin-right: 10px;
+}
+.posts__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.posts__create_button {
+    margin-bottom: 10px;
+}
+.posts__items {}

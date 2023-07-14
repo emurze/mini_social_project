@@ -1,0 +1,18 @@
+.friend_card {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border: 1px ridge #a8a3a3;
+    border-radius: 15px;
+}
+
+.friend_card__image {
+    margin-right: 10px;
+}
+.friend_card__image img {
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.friend_card__title {}

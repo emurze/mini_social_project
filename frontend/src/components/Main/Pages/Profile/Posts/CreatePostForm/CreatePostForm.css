@@ -1,0 +1,14 @@
+.create_post {}
+.create_post input {
+    border: 1px solid black;
+}
+.create_post textarea {
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+.create_post button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1a5cc2;
+    color: #ffffff;
+}

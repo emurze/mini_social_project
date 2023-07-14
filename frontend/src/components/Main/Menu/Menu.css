@@ -1,0 +1,24 @@
+.menu {
+    grid-area: menu;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    width: 160px;
+    background-color: #460881;
+    color: #ffffff;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px 0 0 0;
+    list-style-type: none;
+}
+
+@media (max-width: 670px) {
+    .menu {display: none;}
+}

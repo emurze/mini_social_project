@@ -1,0 +1,13 @@
+.sidebar {
+    grid-area: sidebar;
+    margin: 0 auto 30px auto;
+}
+.sidebar__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.sidebar__body {
+    text-align: center;
+    border: 1px ridge #a8a3a3;
+    border-radius: 15px;
+}

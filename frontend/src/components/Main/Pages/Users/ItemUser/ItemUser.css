@@ -1,0 +1,63 @@
+.item_user {
+    display: grid;
+    grid-template-columns: 100px minmax(180px, 550px);
+    grid-template-areas: "left right";
+    margin-bottom: 10px;
+}
+.item_user__left {
+    grid-area: left;
+
+    padding: 10px 0;
+    border-left: 1px ridge #a8a3a3;
+    border-top: 1px ridge #a8a3a3;
+    border-bottom: 1px ridge #a8a3a3;
+    border-radius: 10px 0 0 10px;
+}
+
+.item_user__image {
+    text-align: center;
+    margin-bottom: 7px;
+}
+.item_user__image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.item_user__button {}
+
+
+.item_user__right {
+    grid-area: right;
+    display: grid;
+    grid-template-columns: 3fr minmax(70px, 1fr);
+    grid-template-rows:
+            1fr
+            1.5fr;
+    grid-template-areas:
+        "name country"
+        "description city";
+    position: relative;
+
+    padding: 10px;
+    border-right: 1px ridge #a8a3a3;
+    border-top: 1px ridge #a8a3a3;
+    border-bottom: 1px ridge #a8a3a3;
+    border-radius: 0 10px 10px 0;
+}
+
+.item_user__name {
+    grid-area: name;
+    margin: 5px 10px 0 0;
+    font-size: 18px;
+}
+.item_user__description {
+    grid-area: description;
+    margin: 0 10px 0 0;
+}
+
+.item_user__country {grid-area: country; margin: 5px 0 0 0;}
+.item_user__city {grid-area: city;}
+
+@media (max-width: 670px) {
+
+}

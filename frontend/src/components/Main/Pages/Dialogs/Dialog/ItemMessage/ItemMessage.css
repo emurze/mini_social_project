@@ -1,0 +1,33 @@
+.item_message {
+    display: flex;
+    align-items: flex-end;
+
+    margin-bottom: 10px;
+}
+
+.item_message__image {
+    flex: 0 0 30px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    width: 30px;
+    height: 30px;
+
+    margin-right: 10px;
+}
+.item_message__image img {}
+
+.item_message__body {
+    flex: 0 1 460px;
+
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px ridge #a8a3a3;
+}
+.item_message__body .item_message__name {
+    margin-bottom: 5px;
+}
+.item_message__body .item_message__content {
+    max-width: 440px;
+}

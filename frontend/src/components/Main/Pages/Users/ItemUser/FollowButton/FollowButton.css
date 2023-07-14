@@ -1,0 +1,17 @@
+.follow_button, .unfollow_button {text-align: center;}
+
+.follow_button button, .unfollow_button button {
+    height: 24px;
+    padding: 0 8px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+    background-color: #1a5cc2;
+}
+.follow_button button {
+    padding: 0 10px;
+}
+.unfollow_button button {
+    padding: 0 9px;
+}

@@ -1,0 +1,21 @@
+.header {
+    grid-area: header;
+    min-width: 320px;
+
+    background-color: #02027e;
+}
+.header img {
+    width: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.react_logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.react_logo img {
+    height: 50px;
+    width: 50px;
+}

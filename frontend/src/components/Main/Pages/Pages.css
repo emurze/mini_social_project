@@ -1,0 +1,7 @@
+.pages {
+    grid-column: 4 / 5;
+    margin-left: 10px;
+}
+@media (max-width: 670px) {
+    .pages {grid-column: 2 / 5;}
+}
