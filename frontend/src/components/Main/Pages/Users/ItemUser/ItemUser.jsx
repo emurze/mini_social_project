@@ -1,14 +1,17 @@
 import './ItemUser.css';
 import user_image from '../../../../../images/dialogs_profile.svg'
 import FollowButton from "./FollowButton/FollowButton";
+import {NavLink} from "react-router-dom";
 
 const ItemUser = (props) => {
 	return (
 		<article className='item_user'>
 			<div className="item_user__left">
-				<div className="item_user__image">
-					<img src={ user_image } alt="user_image"/>
-				</div>
+				<NavLink to={`/profile/${ props.id }`}>
+					<div className="item_user__image">
+						<img src={ user_image } alt="user_image"/>
+					</div>
+				</NavLink>
 				<div className="item_user__button">
 					<FollowButton unfollow={ props.id % 2 !== 0 }/>
 				</div>

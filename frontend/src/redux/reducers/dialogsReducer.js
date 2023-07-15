@@ -1,4 +1,4 @@
-import Action from "../Actions";
+import Action from "../actions/Actions";
 
 let initial_state = {
 	'dialogs': [

@@ -8,7 +8,7 @@ const FriendCard = (props) => {
 				<img src={ friend_image } alt="friend"/>
 			</div>
 			<div className="friend_card__title">
-				{ props.name }
+				{ props.username }
 			</div>
 		</article>
 	)

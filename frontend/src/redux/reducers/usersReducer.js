@@ -1,11 +1,14 @@
-import Action from "../Actions";
-import {UsersPaginationActions} from "../UsersPaginationActions";
+import Action from "../actions/Actions";
+import {
+	UsersPaginationAction,
+} from "../actions/UsersPaginationAction";
 
 let initialState = {
 	'users': [],
-	'page_size': 0,
+	'page_size': 4,
 	'page_count': 0,
 	'current_page': 1,
+	'isFetching': false,
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -13,11 +16,6 @@ const usersReducer = (state = initialState, action) => {
 		case Action.SET_USERS: {
 			let stateCopy = structuredClone(state)
 			stateCopy.users = action.users
-			return stateCopy
-		}
-		case Action.SET_PAGE_SIZE: {
-			let stateCopy = structuredClone(state)
-			stateCopy.page_size = action.page_size
 			return stateCopy
 		}
 		case Action.SET_PAGE_COUNT: {
@@ -36,13 +34,23 @@ const usersReducer = (state = initialState, action) => {
 			const max_constraint = stateCopy.current_page < pages
 			const min_constraint = stateCopy.current_page > 1
 
-			if (action.page_action === UsersPaginationActions.Next
+			if (action.page_action === UsersPaginationAction.Next
 				&& max_constraint){
 				stateCopy.current_page++}
-			else if (action.page_action === UsersPaginationActions.Previous
+			else if (action.page_action === UsersPaginationAction.Previous
 				     && min_constraint) {
 				stateCopy.current_page--
 			}
+			return stateCopy
+		}
+		case Action.HIDE_LOADED_USERS: {
+			let stateCopy = structuredClone(state)
+			stateCopy.users = []
+			return stateCopy
+		}
+		case Action.TOGGLE_IS_FETCHING: {
+			let stateCopy = structuredClone(state)
+			stateCopy.isFetching = action.isFetching
 			return stateCopy
 		}
 		default: return state

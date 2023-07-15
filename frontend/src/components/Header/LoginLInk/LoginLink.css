@@ -1,0 +1,8 @@
+.login_link {
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 18px;
+    color: #6cd6ee;
+}

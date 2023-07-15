@@ -1,4 +1,4 @@
-import Action from "../Actions";
+import Action from "../actions/Actions";
 
 let initial_state = {
 	'posts': [
@@ -18,7 +18,8 @@ let initial_state = {
 		{'id': 5, 'name': 'Lera'},
 	],
 	'new_post_title': "",
-	"new_post_content": ""
+	"new_post_content": "",
+	"profile": null,
 }
 
 const profileReducer = (state = initial_state, action) => {
@@ -35,12 +36,18 @@ const profileReducer = (state = initial_state, action) => {
 			stateCopy.new_post_content = ""
 			return stateCopy
 		}
-		
-		case Action.UPDATE_POST:
+		case Action.UPDATE_POST: {
 			let stateCopy = structuredClone(state)
 			stateCopy.new_post_title = action.post_title
 			stateCopy.new_post_content = action.post_content
 			return stateCopy
+		}
+		case Action.SET_USER_PROFILE: {
+			let stateCopy = structuredClone(state)
+			stateCopy.profile = action.profile
+			console.log(stateCopy)
+			return stateCopy
+		}
 		default: return state
 	}
 }
